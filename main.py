@@ -60,4 +60,4 @@ async def nick(ctx, member: discord.Member, nick):
   await member.edit(nick=nick)
   embed = discord.Embed(title="ニックネームを変更しました",description=f"変更された人物: {member.mention}",color=0xffffff)
   await ctx.send(embed=embed)
-bot.run('MTE4MjMwOTUyMjcxMTI2MTI4Ng.GyHb0X.W6dxugrPDCqnseersYzd7h4tF1OWdPDhBYhL-4')
+bot.run('token')
