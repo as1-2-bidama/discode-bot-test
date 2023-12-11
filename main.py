@@ -1,4 +1,4 @@
-#a
+#
 import discord
 from discord.ext import commands
 import logging
@@ -14,7 +14,14 @@ async def on_ready():
     
 @intents.event
 async def on_message(message):
-    if message.author != intents.user:
+  def check(msg):
+    return msg.author == message.author
+  if message.author != intents.user:
+
+    if message.content.startswith('/mess'):
         await message.channel.send(message.author)
+        
+        wait_message = await intents.wait_for("message",check=check)
+        await message.channel.send(wait_message.content)
         
 intents.run('token',log_handler=handler)
