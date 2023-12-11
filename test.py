@@ -80,4 +80,4 @@ async def on_message(message):
     if message.content.startswith('hello'):
         await message.channel.send('Hello!')
 
-client.run('MTE4MjMwOTUyMjcxMTI2MTI4Ng.GOPCns._PQm1ZgxeRcG47UyAzoO2agLxyfg9yURV8Xwzk',log_handler=handler)
+client.run('token',log_handler=handler)
